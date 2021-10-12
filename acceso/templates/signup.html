@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+</head>
+
+
+<body style="background-color: grey">
+     
+     <h1 style="text-align: center; color:green">Sign up</h1>
+     
+     {% if error %}
+     <h2 style='color:red'>Datos incorrectos</h2>
+
+     {% endif %}
+     
+     <form action="{% url 'Acceso_signup' %}" method="POST">{% csrf_token %}
+     	<table>{{signup_form.as_table}}</table>
+     	<input type="submit" value="Sea parte">
+     </form>
+     
+
+</body>
+
+
+
+
+</html>

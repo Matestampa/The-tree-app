@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+</head>
+
+
+<body style="background-color: grey">
+     <h1 style="text-align: center; color:green">Login</h1>
+     
+     {% if error %}
+     <h2 style='color:red'>Datos incorrectos</h2>
+     
+     {% endif %}
+     <form action="{% url 'Acceso_login' %}" method="POST">{% csrf_token %}
+     	<table>{{login_form.as_table}}</table>
+     	<input type="submit" value="Ingresar">
+     </form>
+     
+     <a href="{% url 'Acceso_signup' %}">Sign up</a>  
+
+</body>
+
+
+
+
+</html>

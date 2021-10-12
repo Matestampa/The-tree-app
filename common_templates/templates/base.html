@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load static %}
+    
+    <!------- CSS ----------------------------------------------------------------->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}" media="screen" />
+	
+
+
+	<meta charset="utf-8">
+	<title>The Tree APP</title>
+
+</head>
+<body>
+
+<h1 class="title">The Tree App</h1>
+
+
+
+<!-------- NAVBAR --------------------------------------------->
+
+<nav class="menu">
+	<ul>
+	<li><a href="{% url 'Home' %}">Inicio</a>
+	</li>
+	<li><a href="{% url 'Plantar' %}">Plantar</a>
+	</li>
+
+	<li><a href="{% url 'Cuidar' %}">Cuidar</a>
+	</li>
+
+
+	<li><a href="#">Perfil</a>
+	</li>
+	
+	</ul>
+</nav>
+
+
+<!-------- CAMBIOS ------------------------------->
+
+{% block content %}
+
+
+{% endblock %}
+
+</body>
+<!----- FOOTER ----------->
+<footer>
+
+<nav class="menu">
+	<ul>
+	<li><a href="#">Contacto</a></li>
+	<li><a href="#">Esmikel</a></li>
+	</ul>
+</nav>
+
+</footer>
+
+
+
+
+</html>

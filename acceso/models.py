@@ -2,6 +2,10 @@ from django.db import models
 
 # Create your models here.
 
+
+
+
+###### PENSAR EN EL MANEJO DE LOS IDS ###################################
 class User_data(models.Model):
 	   username=models.CharField(max_length=50,unique=True)
 	   email=models.CharField(max_length=80)
@@ -12,8 +16,19 @@ class User_data(models.Model):
 
 
 class User_access(models.Model):
-	  user_id=models.ForeignKey(User_data,on_delete=models.CASCADE)
 	  password=models.CharField(max_length=50)
+	  user_id=models.ForeignKey(User_data,on_delete=models.CASCADE)
+
+	  def encrypt_pswd(text):
+		  pass
 
 	  def __str__(self):
 	  	  return str(self.id) + " : " + self.user_id.username
+
+
+class Profile(models.Model):
+	  ubicacion=models.CharField(max_length=100)
+	  foto=models.Charfield(max_lenght=100)
+	  user_id=models.ForeignKey(User_data,on_delete=models.CASCADE)
+
+	  return str(self.user_id.id) + ":" + self.user_id.username

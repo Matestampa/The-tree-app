@@ -3,8 +3,6 @@ from django.db import models
 # Create your models here.
 
 
-
-
 ###### PENSAR EN EL MANEJO DE LOS IDS ###################################
 class User_data(models.Model):
 	   username=models.CharField(max_length=50,unique=True)
@@ -28,7 +26,8 @@ class User_access(models.Model):
 
 class Profile(models.Model):
 	  ubicacion=models.CharField(max_length=100)
-	  foto=models.Charfield(max_lenght=100)
+	  foto=models.CharField(max_length=100)
 	  user_id=models.ForeignKey(User_data,on_delete=models.CASCADE)
-
-	  return str(self.user_id.id) + ":" + self.user_id.username
+	  
+	  def __str__(self):
+	      return str(self.user_id.id) + ":" + self.user_id.username

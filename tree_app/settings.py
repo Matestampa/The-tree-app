@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     "common_templates",
+    'rest_framework',
     "acceso",
     "home",
     "plantar",

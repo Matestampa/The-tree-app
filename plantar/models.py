@@ -15,14 +15,14 @@ class Arboles_gen(models.Model):
 
 
 class Plantados(models.Model):
-      gen_id=models.ForeignKey(Arboles_gen,on_delete=DO_NOTHING)
+      gen=models.ForeignKey(Arboles_gen,on_delete=DO_NOTHING)
       ubi_coord=models.CharField(max_length=100)
       ubi_text=models.CharField(max_length=100)
-      ult_regado=models.DateTimeField()
+      ult_regado=models.DateTimeField(auto_now_add=True)
       en_cuidado=models.BooleanField(default=True)
       especificaciones=models.CharField(max_length=200)
-      dueño_id=models.ForeignKey(Profile,on_delete=DO_NOTHING)
+      dueño=models.ForeignKey(Profile,on_delete=DO_NOTHING)
 
       def __str__(self):
 
-          return str(self.id) + ":" + self.gen_id.tipo
+          return str(self.id) + ":" + self.gen.tipo

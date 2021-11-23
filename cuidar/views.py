@@ -1,8 +1,17 @@
-from django.shortcuts import render
+from rest_framework.decorators import api_view
+from rest_framework. response import Response
+from rest_framework import status
 
-# Create your views here.
+from rest_framework import generics
+
+from plantar.serializers import Trees_Serializer
+from plantar.models import Plantados
 
 
-def cuidar(request):
+@api_view(["GET"])
+def all_trees(request):
+	trees=Plantados.objects.filter(en_cuidado=True)
+    
+	serialized_trees=Trees_Serializer(trees,many=True)
 
-	return render(request,"cuidar_main.html")
+	return Response(serialized_trees.data)

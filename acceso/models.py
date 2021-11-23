@@ -28,6 +28,9 @@ class Profile(models.Model):
 	  ubicacion=models.CharField(max_length=100)
 	  foto=models.CharField(max_length=100)
 	  user=models.ForeignKey(User_data,on_delete=models.CASCADE)
-	  
+
+	  def get_username(self):
+		  return self.user.username
+
 	  def __str__(self):
 	      return str(self.user.id) + ":" + self.user.username

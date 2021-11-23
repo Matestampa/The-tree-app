@@ -3,5 +3,5 @@ from cuidar import views
 
 
 urlpatterns=[
-             path("",views.cuidar,name="Cuidar")
+             path("all_trees",views.all_trees,name="Cuidar_tree")
 ]

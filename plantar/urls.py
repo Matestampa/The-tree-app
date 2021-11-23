@@ -3,5 +3,5 @@ from plantar import views
 
 
 urlpatterns=[
-             path("",views.all_trees,name="Plantar")
+             path("new_tree",views.new_tree,name="New_Tree")
 ]

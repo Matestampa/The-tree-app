@@ -1,11 +1,28 @@
 -----acceso----------
+ Hecho:
+ Login
 
+
+ Falta:
+ Signup
 
 
 
 -----plantar------
-Subir un arboll
+Hecho:
+subir arbol
+
+Falta:
+subir la ubi_coord con la api de google maps
 -----------------
 
+Cuidar:
 
+Hecho:
+Mostrar arboles disponibles
+
+
+Falta:
+Mostrar bien la fecha
+Sumarse a cuidar un arbol
 

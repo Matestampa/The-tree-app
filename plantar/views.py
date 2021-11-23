@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from rest_framework.decorators import api_view
 from rest_framework. response import Response
 from rest_framework import status
@@ -9,15 +8,17 @@ from .serializers import Trees_Serializer
 from .models import Plantados
 
 
-@api_view(["GET"])
-def all_trees(request):
-	trees=Plantados.objects.filter(en_cuidado=True)
-    
-	serialized_trees=Trees_Serializer(trees,many=True)
+@api_view(["POST"])
+def new_tree(request):
+	
+	new_tree=Trees_Serializer(data=request.data)
 
-	return Response(serialized_trees.data)
-
-
-
+	if new_tree.is_valid():
+	   new_tree.save()
+	   return Response("Arbol añadido con exito")
+	
+	else:
+	   print(new_tree.errors)
+	   return Response(new_tree.errors)
 
 

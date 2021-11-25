@@ -1,11 +1,13 @@
 -----acceso----------
  Hecho:
  Login
-
-
+ signup basico
+ 
+ 
  Falta:
- Signup
-
+Guardar contraseña encriptada
+Mejorara las validaciones del signup
+Mejorar como devolvemmos los mensajes
 
 
 -----plantar------

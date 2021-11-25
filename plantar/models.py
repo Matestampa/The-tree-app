@@ -16,7 +16,7 @@ class Arboles_gen(models.Model):
 
 class Plantados(models.Model):
       arbol_gen=models.ForeignKey(Arboles_gen,on_delete=DO_NOTHING)
-      ubi_coord=models.CharField(max_length=100,default="")
+      ubi_coord=models.CharField(max_length=100,default="")# le ponemos default para que el serializer no lo pida como obligatorio
       ubi_text=models.CharField(max_length=100)
       ult_regado=models.DateTimeField(auto_now_add=True)
       en_cuidado=models.BooleanField(default=True)

@@ -26,7 +26,7 @@ class User_access(models.Model):
 
 class Profile(models.Model):
 	  ubicacion=models.CharField(max_length=100)
-	  foto=models.CharField(max_length=100)
+	  foto=models.CharField(max_length=100,default="login.jpg")
 	  user=models.ForeignKey(User_data,on_delete=models.CASCADE)
 
 	  def get_username(self):

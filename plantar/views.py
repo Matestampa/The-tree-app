@@ -15,10 +15,9 @@ def new_tree(request):
 
 	if new_tree.is_valid():
 	   new_tree.save()
-	   return Response("Arbol añadido con exito")
+	   return Response("Arbol añadido con exito",status=status.HTTP_201_CREATED)
 	
 	else:
-	   print(new_tree.errors)
 	   return Response(new_tree.errors)
 
 

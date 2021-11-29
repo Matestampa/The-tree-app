@@ -6,5 +6,6 @@ urlpatterns = [
     path("acceso/",include("acceso.urls")),
     path('home/',include("home.urls")),
     path("plantar/",include("plantar.urls")),
-    path("cuidar/",include("cuidar.urls"))
+    path("cuidar/",include("cuidar.urls")),
+    path("perfil/",include("perfil.urls"))
 ]

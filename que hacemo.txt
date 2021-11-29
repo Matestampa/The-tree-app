@@ -15,16 +15,29 @@ Hecho:
 subir arbol
 
 Falta:
-subir la ubi_coord con la api de google maps
+subir la ubi_coord con la api de google maps 
 -----------------
 
 Cuidar:
 
 Hecho:
 Mostrar arboles disponibles
+Sumarse a cuidar un arbol
+proceso de confirmacion si se hace
+
+Falta:
+mostra fecha con minutos(pero en general ya esta)
+proceso de confirmacion si no se hace
+
+
+Perfil:
+
+Hecho:
+Mostrar un perfil particular, con sus arboles a cargo
 
 
 Falta:
-Mostrar bien la fecha
-Sumarse a cuidar un arbol
+Mostrar los arboles que cuido
+url para mostrar solo info basica del perfil(varios perfiles)
+
 

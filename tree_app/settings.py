@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     "acceso",
     "home",
     "plantar",
-    "cuidar"
+    "cuidar",
+    "perfil"
 ]
 
 MIDDLEWARE = [
@@ -59,7 +60,7 @@ ROOT_URLCONF = 'tree_app.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ["C:/Users/Matew/Desktop/tree_app/common_templates/templates"],
+        'DIRS':"",
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

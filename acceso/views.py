@@ -112,7 +112,6 @@ def login_view(request):
 
 @api_view(["POST"])
 def signup_view(request):
-    print(request.data)
 
     signup_instance=Signup(request.data)
 

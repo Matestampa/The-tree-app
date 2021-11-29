@@ -27,7 +27,7 @@ class Trees_Serializer(serializers.ModelSerializer):
       
       def to_representation(self, instance):
           response=super().to_representation(instance)
-          #response["ult_regado"]=instance.get_ult_regado() #faltaria la fecha
+          response["ult_regado"]=instance.get_ult_regado()
           response["arbol_gen"]=str(instance.arbol_gen)
           response["dueño_username"]=str(instance.dueño.get_username())
 

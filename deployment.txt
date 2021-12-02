@@ -1,0 +1,35 @@
+Pasos de deploy django(en heroku)
+
+pip install gunicorn (servidor)
+pip install psycopg
+pip install dj-database-url
+pip install whitenoise (para archivos estaticos)
+pip install decouple
+
+(dentro de la carpeta principal)
+    pip freeze > requirements.txt
+
+
+en settings cambiar:
+
+allowed_host=["*"]
+
+DEBUG=False
+
+import dj_database_url
+from decouple import config
+
+DATABASES={
+           "default":dj_database_url.config(default=config("DATABASE_URL"))
+}
+
+
+#--------configurar statics files---------
+
+#-----------------------------------------
+
+Crear archivo "Procfile" a la altura del manage.py
+Crear archivo runtime.txt ponemos:python-"version"
+
+Ahi ponemos:
+    web: gunicorn treeapp.wsgi --log-file -

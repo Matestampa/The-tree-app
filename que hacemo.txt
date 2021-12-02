@@ -39,5 +39,5 @@ Mostrar un perfil particular, con sus arboles a cargo
 Falta:
 Mostrar los arboles que cuido
 url para mostrar solo info basica del perfil(varios perfiles)
-
+ 
 
